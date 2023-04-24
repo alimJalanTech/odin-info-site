@@ -1,6 +1,8 @@
+//Required Libraries
 const http = require("http");
 const fs = require("fs");
 
+//Server Creation
 const server = http.createServer((req, res) => {
   if (req.url === "/") {
     fs.readFile("./index.html", (err, data) => {
